@@ -24,4 +24,17 @@ public class ContaBancaria {
     public void setCorrentista(Correntista correntista) {
         this.correntista = correntista;
     }
+
+    // Interação entre Classes
+    public void depositar(double valor) {
+        this.saldo += valor;
+    }
+
+    public boolean sacar(double valor) {
+        if(this.saldo >= valor) {
+            this.saldo -= valor;
+            return true;
+        }
+        return false;
+    }
 }
