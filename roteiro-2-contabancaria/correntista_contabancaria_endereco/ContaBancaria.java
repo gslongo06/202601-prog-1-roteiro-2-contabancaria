@@ -1,58 +1,44 @@
-package correntista_contabancaria_endereco;
-
 public class ContaBancaria {
-
     private int numero;
     private double saldo;
     private Correntista correntista;
-    
-    public int getNumero() {
-        return numero;
-    }
+
+    // Getters e Setters
     public void setNumero(int numero) {
         this.numero = numero;
     }
-    public double getSaldo() {
-        return saldo;
+
+    public int getNumero() {
+        return this.numero;
     }
+
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
-    public Correntista getCorrentista() {
-        return correntista;
+
+    public double getSaldo() {
+        return this.saldo;
     }
+
     public void setCorrentista(Correntista correntista) {
         this.correntista = correntista;
     }
 
-    // Interação entre Classes
-    public void depositar(double valor) {
-        this.saldo += valor;
+    public Correntista getCorrentista() {
+        return this.correntista;
     }
 
-    public boolean sacar(double valor) {
-        if(this.saldo >= valor) {
-            this.saldo -= valor;
-            return true;
-        }
-        return false;
-    }
-
-    // Métodos que utilizam objetos de outras classes
-    public void transferir(double valor, ContaBancaria contaDestino) {
-        if (this.sacar(valor)) {
-            contaDestino.depositar(valor);
+    // Métodos do Diagrama
+    public void exibirDetalhes() {
+        System.out.println("Número da Conta: " + this.numero);
+        System.out.println("Saldo: R$ " + this.saldo);
+        if (this.correntista != null) {
+            System.out.println("Titular: " + this.correntista.getNome());
         }
     }
 
-    // Métodos que retornam objetos de outras classes
-    public ContaBancaria getConta() {
-    return conta;
-    }
-
-    // Classe com métodos de comparação
-    public boolean eIgual(ContaBancaria outraConta) {
-    if (outraConta == null) return false;
-    return this.numero == outraConta.getNumero();
+    public boolean comparaSaldo(ContaBancaria outraConta) {
+        if (outraConta == null) return false;
+        return this.saldo == outraConta.getSaldo();
     }
 }

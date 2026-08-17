@@ -1,54 +1,48 @@
-package correntista_contabancaria_endereco;
-
 public class Correntista {
-
     private String nome;
     private String cpf;
     private ContaBancaria conta;
+    private Endereco endereco;
 
+    // Getters e Setters
     public String getNome() {
-        return nome;
+        return this.nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
+
     public String getCpf() {
-        return cpf;
+        return this.cpf;
     }
+
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    public ContaBancaria getConta() {
-        return conta;
-    }
+
     public void setConta(ContaBancaria conta) {
         this.conta = conta;
     }
 
-    // Associação Simples
-    private Endereco endereco;
-
-    public Endereco getEndereco() {
-        return endereco;
+    public ContaBancaria getConta() {
+        return this.conta;
     }
 
-    public void setEndereco() {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
 
-    // Métodos que retornam objetos de outras classes
-    public Correntista getCorrentista() {
-    return correntista;
+    public Endereco getEndereco() {
+        return this.endereco;
     }
 
-    // Métodos que utilizam objetos de outras classes (Aprofundamento)
-    public void atualizarEndereco(Endereco novoEndereco) {
-    this.endereco = novoEndereco;
-    }
-
-    // Classe com métodos de comparação
-    public boolean eIgual(Correntista outroCorrentista) {
-    if (outroCorrentista == null) return false;
-    return this.cpf != null && this.cpf.equals(outroCorrentista.getCpf());
+    // Métodos do Diagrama
+    public void exibirDetalhes() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("CPF: " + this.cpf);
+        if (this.endereco != null) {
+            System.out.println("Endereço: " + this.endereco.exibirEndereco());
+        }
     }
 }

@@ -1,32 +1,35 @@
-package correntista_contabancaria_endereco;
-
 public class Endereco {
+    private String rua;
+    private int numero;
+    private String cidade;
 
-    String rua;
-    int numero;
-    String cidade;
-    
+    // Getters e Setters
     public String getRua() {
-        return rua;
+        return this.rua;
     }
+
     public void setRua(String rua) {
         this.rua = rua;
     }
+
     public int getNumero() {
-        return numero;
+        return this.numero;
     }
+
     public void setNumero(int numero) {
         this.numero = numero;
     }
+
     public String getCidade() {
-        return cidade;
+        return this.cidade;
     }
+
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
 
-    // Métodos que retornam objetos de outras classes
-    public Endereco getEndereco() {
-    return endereco;
+    // Método do Diagrama
+    public String exibirEndereco() {
+        return this.rua + ", nº " + this.numero + " - " + this.cidade;
     }
 }
