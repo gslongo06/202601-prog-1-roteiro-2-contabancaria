@@ -37,4 +37,11 @@ public class ContaBancaria {
         }
         return false;
     }
+
+    // Métodos que utilizam objetos de outras classes
+    public void transferir(double valor, ContaBancaria contaDestino) {
+        if (this.sacar(valor)) {
+            contaDestino.depositar(valor);
+        }
+    }
 }
