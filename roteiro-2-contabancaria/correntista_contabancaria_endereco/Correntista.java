@@ -45,4 +45,10 @@ public class Correntista {
     public void atualizarEndereco(Endereco novoEndereco) {
     this.endereco = novoEndereco;
     }
+
+    // Classe com métodos de comparação
+    public boolean eIgual(Correntista outroCorrentista) {
+    if (outroCorrentista == null) return false;
+    return this.cpf != null && this.cpf.equals(outroCorrentista.getCpf());
+    }
 }

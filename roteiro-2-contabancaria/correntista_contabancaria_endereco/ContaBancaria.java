@@ -49,4 +49,10 @@ public class ContaBancaria {
     public ContaBancaria getConta() {
     return conta;
     }
+
+    // Classe com métodos de comparação
+    public boolean eIgual(ContaBancaria outraConta) {
+    if (outraConta == null) return false;
+    return this.numero == outraConta.getNumero();
+    }
 }
