@@ -35,4 +35,9 @@ public class Correntista {
     public void setEndereco() {
         this.endereco = endereco;
     }
+
+    // Métodos que retornam objetos de outras classes
+    public Correntista getCorrentista() {
+    return correntista;
+    }
 }

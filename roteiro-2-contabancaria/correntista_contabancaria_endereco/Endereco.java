@@ -24,4 +24,9 @@ public class Endereco {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
+
+    // Métodos que retornam objetos de outras classes
+    public Endereco getEndereco() {
+    return endereco;
+    }
 }

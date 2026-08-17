@@ -44,4 +44,9 @@ public class ContaBancaria {
             contaDestino.depositar(valor);
         }
     }
+
+    // Métodos que retornam objetos de outras classes
+    public ContaBancaria getConta() {
+    return conta;
+    }
 }
