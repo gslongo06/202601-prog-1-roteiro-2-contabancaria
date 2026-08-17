@@ -1,4 +1,4 @@
-package app_conta;
+package exemplo_app_conta;
 public class Conta {
 
     String numero;
