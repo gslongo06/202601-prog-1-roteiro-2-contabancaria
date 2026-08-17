@@ -24,4 +24,15 @@ public class Correntista {
     public void setConta(ContaBancaria conta) {
         this.conta = conta;
     }
+
+    // Associação Simples
+    private Endereco endereco;
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco() {
+        this.endereco = endereco;
+    }
 }
