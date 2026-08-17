@@ -40,4 +40,9 @@ public class Correntista {
     public Correntista getCorrentista() {
     return correntista;
     }
+
+    // Métodos que utilizam objetos de outras classes (Aprofundamento)
+    public void atualizarEndereco(Endereco novoEndereco) {
+    this.endereco = novoEndereco;
+    }
 }
